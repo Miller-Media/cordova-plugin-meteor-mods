@@ -1,0 +1,12 @@
+{
+  "name": "cordova-plugin-meteor-mods",
+  "version": "1.0.0",
+  "cordova": {
+    "id": "cordova-plugin-meteor-mods",
+    "platforms": [
+      "android",
+      "ios",
+    ]
+  },
+  "description": "Custom modifications for Meteor apps on the native side"
+}

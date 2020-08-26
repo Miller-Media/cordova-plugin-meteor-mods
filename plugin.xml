@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="cordova-plugin-meteor-mods"
+    version="1.0.0">
+    <name>Cordova Plugin Meteor Mods</name>
+    <description></description>
+    <license>MIT</license>
+    <keywords></keywords>
+    <repo>https://github.com/Miller-Media/cordova-plugin-meteor-mods.git</repo>
+    <issue>https://github.com/Miller-Media/cordova-plugin-meteor-mods/issues</issue>
+
+    <!-- android -->
+    <platform name="android">
+      <js-module src="www/plugin.js" name="plugin">
+        <runs/>
+        <clobbers target="MeteorMods" />
+      </js-module>
+      <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="MeteorMods">
+          <param name="android-package" value="com.millermedia.MeteorMods" />
+          <param name="onload" value="true" />
+        </feature>
+      </config-file>
+
+      <source-file src="src/android/com/millermedia/MeteorMods.java" target-dir="src/com/millermedia/" />
+    </platform>
+
+    <!-- ios -->
+    <platform name="ios">
+        <js-module src="www/plugin.js" name="plugin">
+            <runs/>
+            <clobbers target="MeteorMods" />
+        </js-module>
+        <config-file target="config.xml" parent="/*">
+            <feature name="MeteorMods">
+                <param name="ios-package" value="MeteorMods" onload="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/MeteorMods.h" />
+        <source-file src="src/ios/MeteorMods.m" />
+    </platform>
+</plugin>
